@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "navegacaos",
+  "info": {
+    "singularName": "navegacao",
+    "pluralName": "navegacaos",
+    "displayName": "-- Navegacao",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "whatsAppLabel": {
+      "type": "string",
+      "required": true,
+      "default": "Precisa de ajuda?"
+    },
+    "searchLabel": {
+      "type": "string",
+      "default": "Pesquise por <strong>apartamentos, financiamento</strong>...",
+      "required": true
+    },
+    "navbarItens": {
+      "displayName": "navbarItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "navegacao.navbar-item"
+    },
+    "footerItens": {
+      "displayName": "footerItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "navegacao.footer-item",
+      "required": true
+    },
+    "socialItens": {
+      "displayName": "socialItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "navegacao.social-item",
+      "required": true
+    }
+  }
+}

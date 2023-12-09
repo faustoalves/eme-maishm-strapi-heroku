@@ -1,0 +1,61 @@
+{
+  "kind": "singleType",
+  "collectionName": "mcmvs",
+  "info": {
+    "singularName": "mcmv",
+    "pluralName": "mcmvs",
+    "displayName": "- MCMV",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.seo",
+      "required": true
+    },
+    "vantagens": {
+      "displayName": "VantagensMCMV",
+      "type": "component",
+      "repeatable": false,
+      "component": "mcmv.vantagens-mcmv",
+      "required": true
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "mcmv.banner-mcmv",
+      "required": true
+    },
+    "simulcacao": {
+      "displayName": "SimulacaoMCMV",
+      "type": "component",
+      "repeatable": false,
+      "component": "mcmv.simulacao-mcmv",
+      "required": true
+    },
+    "faixas": {
+      "displayName": "FaixasMCMV",
+      "type": "component",
+      "repeatable": false,
+      "component": "mcmv.faixas-mcmv"
+    },
+    "taxasJuros": {
+      "displayName": "TaxasJurosMCMV",
+      "type": "component",
+      "repeatable": false,
+      "component": "mcmv.taxas-juros-mcmv"
+    },
+    "duvidas": {
+      "displayName": "duvidasMCMV",
+      "type": "component",
+      "repeatable": false,
+      "component": "mcmv.duvidas-mcmv",
+      "required": true
+    }
+  }
+}

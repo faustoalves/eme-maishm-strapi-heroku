@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_home_onde_morars",
+  "info": {
+    "displayName": "OndeMorar"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "default": "Onde você quer morar?",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    },
+    "labelSelecione": {
+      "type": "string",
+      "required": true,
+      "default": "Selecione uma cidade"
+    },
+    "labelPesquisar": {
+      "type": "string",
+      "default": "pesquisar",
+      "required": true
+    }
+  }
+}

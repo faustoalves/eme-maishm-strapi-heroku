@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_banner_principal_items",
+  "info": {
+    "displayName": "BannerPrincipalItem"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "mobileImage": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "desktopImage": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_sobre_premios_item_sobres",
+  "info": {
+    "displayName": "PremiosItemSobre"
+  },
+  "options": {},
+  "attributes": {
+    "categoria": {
+      "type": "enumeration",
+      "enum": [
+        "certificacoes",
+        "premios"
+      ],
+      "default": "certificacoes",
+      "required": true
+    },
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "imagem": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

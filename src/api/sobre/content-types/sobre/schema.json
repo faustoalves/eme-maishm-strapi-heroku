@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "sobres",
+  "info": {
+    "singularName": "sobre",
+    "pluralName": "sobres",
+    "displayName": "- Sobre",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.seo",
+      "required": true
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sobre.banner-sobre",
+      "required": true
+    },
+    "historia": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sobre.historia-sobre",
+      "required": true
+    },
+    "ondeEstamos": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sobre.onde-estamos-sobre",
+      "required": true
+    },
+    "tecnologia": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sobre.tecnologia-sobre",
+      "required": true
+    },
+    "sustentabilidade": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sobre.sustentabilidade-sobre",
+      "required": true
+    },
+    "meioAmbiente": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sobre.meio-ambiente-sobre",
+      "required": true
+    },
+    "premios": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sobre.premios-sobre",
+      "required": true
+    }
+  }
+}

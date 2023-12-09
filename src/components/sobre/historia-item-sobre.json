@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sobre_historia_item_sobres",
+  "info": {
+    "displayName": "HistoriaItemSobre"
+  },
+  "options": {},
+  "attributes": {
+    "imagem": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "data": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_empreendimento_fotos",
+  "info": {
+    "displayName": "Fotos Empreendimento"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "grupos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.image-icone-label",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_mcmv_faixa_items_mcmvs",
+  "info": {
+    "displayName": "FaixaItemsMCMV"
+  },
+  "options": {},
+  "attributes": {
+    "faixa": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    }
+  }
+}

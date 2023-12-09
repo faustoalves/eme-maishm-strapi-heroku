@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sobre_inovacao_sobres",
+  "info": {
+    "displayName": "InovacaoSobre"
+  },
+  "options": {},
+  "attributes": {
+    "titluo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "imagem": {
+      "allowedTypes": ["images", "files", "videos", "audios"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

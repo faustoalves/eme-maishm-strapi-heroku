@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_empreendimento_localizacao_enderecos",
+  "info": {
+    "displayName": "Localizacao Endereco"
+  },
+  "options": {},
+  "attributes": {
+    "tipoEndereco": {
+      "type": "string",
+      "required": true,
+      "default": "Endereço do <strong>empreendimento e decorado</strong>"
+    },
+    "endereco": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "wazeLabel": {
+      "type": "string",
+      "default": "Waze",
+      "required": true
+    },
+    "wazeLink": {
+      "type": "string"
+    },
+    "googleMapsLabel": {
+      "type": "string",
+      "default": "google maps",
+      "required": true
+    },
+    "googleMapsLink": {
+      "type": "string"
+    }
+  }
+}

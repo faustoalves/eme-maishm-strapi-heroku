@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_search_search_items",
+  "info": {
+    "displayName": "searchItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "keyword": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_empreendimentos",
+  "info": {
+    "singularName": "home-empreendimento",
+    "pluralName": "home-empreendimentos",
+    "displayName": "- Home Empreendimentos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.seo",
+      "required": true
+    },
+    "ondeMorar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.onde-morar",
+      "required": true
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.banner-principal",
+      "required": true
+    },
+    "jeitoMorar": {
+      "displayName": "JeitoMorar",
+      "type": "component",
+      "repeatable": false,
+      "component": "empreendimentos.jeito-morar",
+      "required": true
+    },
+    "jeitoMorarLista": {
+      "type": "component",
+      "repeatable": true,
+      "component": "empreendimentos.jeito-morar-item",
+      "required": true,
+      "min": 4,
+      "max": 5
+    },
+    "ctas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cta.cta"
+    }
+  }
+}

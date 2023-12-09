@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "promo_regulamentos",
+  "info": {
+    "singularName": "promo-regulamento",
+    "pluralName": "promo-regulamentos",
+    "displayName": "- Promo & Regulamentos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.seo",
+      "required": true
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "lista": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.download-item",
+      "required": true,
+      "min": 1
+    },
+    "cta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cta.cta",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_empreendimento_status_obras",
+  "info": {
+    "displayName": "StatusObra"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true,
+      "default": "confira o <strong>andamento da obra</strong>"
+    },
+    "empreendimento": {
+      "type": "string"
+    },
+    "percentual": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "max": 100
+    },
+    "previsaoConclusao": {
+      "type": "string",
+      "required": true,
+      "default": "Previsão de conclusão: <strong>00/00/0000</strong>"
+    },
+    "fases": {
+      "displayName": "StatusObraItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "empreendimento.status-obra-item",
+      "required": true,
+      "min": 1
+    },
+    "urlVideoYoutube": {
+      "type": "string"
+    }
+  }
+}

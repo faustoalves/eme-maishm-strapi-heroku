@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_empreendimento_bot",
+  "info": {
+    "displayName": "Bot Empreendimento"
+  },
+  "options": {},
+  "attributes": {
+    "info": {
+      "type": "string"
+    }
+  }
+}

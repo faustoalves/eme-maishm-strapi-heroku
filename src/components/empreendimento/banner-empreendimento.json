@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_empreendimento_banner_empreendimentos",
+  "info": {
+    "displayName": "BannerEmpreendimento",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "iconesDestaques": {
+      "type": "component",
+      "repeatable": true,
+      "max": 2,
+      "min": 2,
+      "required": true,
+      "component": "common.icone-label"
+    },
+    "precoInicial": {
+      "type": "string"
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logoEmpreendimento": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

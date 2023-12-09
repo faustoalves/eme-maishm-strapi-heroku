@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "demonstrativo_financeiros",
+  "info": {
+    "singularName": "demonstrativo-financeiro",
+    "pluralName": "demonstrativo-financeiros",
+    "displayName": "- Demonstrativo Financeiro",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.seo",
+      "required": true
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "lista": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.download-item",
+      "required": true,
+      "min": 1
+    }
+  }
+}

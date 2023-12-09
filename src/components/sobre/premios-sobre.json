@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sobre_premios_sobres",
+  "info": {
+    "displayName": "PremiosSobre"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "lista": {
+      "displayName": "PremiosItemSobre",
+      "type": "component",
+      "repeatable": true,
+      "component": "sobre.premios-item-sobre",
+      "required": true
+    }
+  }
+}

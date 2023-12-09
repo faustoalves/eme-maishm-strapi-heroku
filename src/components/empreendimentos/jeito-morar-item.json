@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_empreendimentos_jeito_morar_items",
+  "info": {
+    "displayName": "jeitoMorarItem"
+  },
+  "options": {},
+  "attributes": {
+    "marca": {
+      "type": "customField",
+      "options": {
+        "enumType": "marcas"
+      },
+      "customField": "plugin::custom-enum.custom-enum",
+      "required": true
+    },
+    "imagemTopo": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "destaques": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.icone-label",
+      "required": true,
+      "min": 1
+    }
+  }
+}

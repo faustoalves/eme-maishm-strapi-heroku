@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_perguntas_frequentes_grupos",
+  "info": {
+    "displayName": "PerguntasFrequentesGrupo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icone": {
+      "type": "customField",
+      "options": {
+        "enumType": "perguntas-frequentes"
+      },
+      "customField": "plugin::custom-enum.custom-enum"
+    },
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "perguntas-frequentes.item",
+      "required": true,
+      "min": 1
+    }
+  }
+}

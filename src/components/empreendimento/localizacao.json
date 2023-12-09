@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_empreendimento_localizacaos",
+  "info": {
+    "displayName": "Localizacao Empreendimento"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "enderecos": {
+      "displayName": "LocalizacaoEndereco",
+      "type": "component",
+      "repeatable": true,
+      "component": "empreendimento.localizacao-endereco",
+      "required": true,
+      "min": 1
+    },
+    "imagem": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

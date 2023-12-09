@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_perguntas_frequentes_items",
+  "info": {
+    "displayName": "PerguntasFrequentesItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pergunta": {
+      "type": "string",
+      "required": true
+    },
+    "resposta": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    }
+  }
+}

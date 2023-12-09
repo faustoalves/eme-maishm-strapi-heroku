@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_common_icone_labels",
+  "info": {
+    "displayName": "IconeLabel"
+  },
+  "options": {},
+  "attributes": {
+    "icone": {
+      "type": "customField",
+      "options": {
+        "enumType": "destaque-produtos"
+      },
+      "customField": "plugin::custom-enum.custom-enum",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navegacao_navbar_sub_items",
+  "info": {
+    "displayName": "navbarSubItem"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_mcmv_duvidas_mcmvs",
+  "info": {
+    "displayName": "duvidasMCMV"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    },
+    "lista": {
+      "type": "component",
+      "repeatable": true,
+      "component": "perguntas-frequentes.item",
+      "required": true,
+      "min": 1
+    },
+    "botao": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.botao",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_common_download_items",
+  "info": {
+    "displayName": "downloadItem"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

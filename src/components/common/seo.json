@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_common_seos",
+  "info": {
+    "displayName": "seo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "indexFollow": {
+      "type": "enumeration",
+      "enum": [
+        "indexFollow",
+        "indexNoFollow",
+        "noIndexFollow",
+        "noIndexNoFollow"
+      ],
+      "default": "indexFollow",
+      "required": true
+    },
+    "shareImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

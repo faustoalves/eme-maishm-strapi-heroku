@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_empreendimentos_jeito_morars",
+  "info": {
+    "displayName": "JeitoMorar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    },
+    "labelVerIMoveis": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

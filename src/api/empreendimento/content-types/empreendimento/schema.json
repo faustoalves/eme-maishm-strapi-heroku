@@ -1,0 +1,133 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empreendimentos",
+  "info": {
+    "singularName": "empreendimento",
+    "pluralName": "empreendimentos",
+    "displayName": "- Empreendimento",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "nomeBreadcrumb": {
+      "type": "string"
+    },
+    "marca": {
+      "type": "customField",
+      "options": {
+        "enumType": "marcas"
+      },
+      "customField": "plugin::custom-enum.custom-enum"
+    },
+    "tipoEmpreendimento": {
+      "type": "customField",
+      "options": {
+        "enumType": "tipo-empreendimento"
+      },
+      "customField": "plugin::custom-enum.custom-enum"
+    },
+    "statusObra": {
+      "type": "customField",
+      "options": {
+        "enumType": "status-obra"
+      },
+      "customField": "plugin::custom-enum.custom-enum"
+    },
+    "statusVenda": {
+      "type": "customField",
+      "options": {
+        "enumType": "status-venda"
+      },
+      "customField": "plugin::custom-enum.custom-enum"
+    },
+    "cidade": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cidade.cidade",
+      "inversedBy": "empreendimentos"
+    },
+    "bairro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::bairro.bairro"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.seo",
+      "required": true
+    },
+    "bot": {
+      "type": "component",
+      "repeatable": false,
+      "component": "empreendimento.bot",
+      "required": true
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "empreendimento.banner-empreendimento",
+      "required": true
+    },
+    "fotosTitulo": {
+      "type": "string",
+      "required": true
+    },
+    "fotosItens": {
+      "type": "component",
+      "repeatable": true,
+      "component": "empreendimento.fotos",
+      "required": true,
+      "min": 1
+    },
+    "plantasTitulo": {
+      "type": "string",
+      "required": true
+    },
+    "plantasItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "empreendimento.plantas",
+      "required": true,
+      "min": 1
+    },
+    "financiamento": {
+      "type": "component",
+      "repeatable": false,
+      "component": "empreendimento.financiamento",
+      "required": true
+    },
+    "cta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cta.cta"
+    },
+    "implantacao": {
+      "type": "component",
+      "repeatable": false,
+      "component": "empreendimento.implantacao",
+      "required": true
+    },
+    "localizacao": {
+      "type": "component",
+      "repeatable": false,
+      "component": "empreendimento.localizacao",
+      "required": true
+    },
+    "valoresStatusObra": {
+      "type": "component",
+      "repeatable": false,
+      "component": "empreendimento.status-obra",
+      "required": true
+    }
+  }
+}

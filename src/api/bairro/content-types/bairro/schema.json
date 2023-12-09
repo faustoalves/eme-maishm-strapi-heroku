@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bairros",
+  "info": {
+    "singularName": "bairro",
+    "pluralName": "bairros",
+    "displayName": "-- Bairros",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bairro": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

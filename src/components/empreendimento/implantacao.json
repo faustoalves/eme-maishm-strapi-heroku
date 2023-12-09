@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_empreendimento_implantacaos",
+  "info": {
+    "displayName": "Implantacao Empreendimento",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "imagem": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "itens": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.label",
+      "required": true,
+      "min": 1
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_navegacao_footer_items",
+  "info": {
+    "displayName": "footerItem"
+  },
+  "options": {},
+  "attributes": {
+    "desktopCol": {
+      "type": "enumeration",
+      "enum": [
+        "col1",
+        "col2",
+        "col3",
+        "col4"
+      ],
+      "required": true,
+      "default": "col1"
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "sublabel": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "itens": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navegacao.navbar-sub-item"
+    }
+  }
+}

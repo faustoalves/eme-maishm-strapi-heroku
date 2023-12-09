@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_banner_principals",
+  "info": {
+    "displayName": "BannerPrincipal"
+  },
+  "options": {},
+  "attributes": {
+    "lista": {
+      "displayName": "BannerPrincipalItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.banner-principal-item",
+      "required": true,
+      "min": 1,
+      "max": 5
+    }
+  }
+}

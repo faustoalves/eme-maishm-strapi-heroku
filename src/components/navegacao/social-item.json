@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_navegacao_social_items",
+  "info": {
+    "displayName": "socialItem"
+  },
+  "options": {},
+  "attributes": {
+    "network": {
+      "type": "enumeration",
+      "enum": [
+        "whatsapp",
+        "facebook",
+        "instagram",
+        "youtube",
+        "pinterest",
+        "linkedin"
+      ],
+      "default": "whatsapp",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

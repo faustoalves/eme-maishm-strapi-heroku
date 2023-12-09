@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_empreendimento_plantas",
+  "info": {
+    "displayName": "Plantas Empreendimento"
+  },
+  "options": {},
+  "attributes": {
+    "categoria": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "subtitulo": {
+      "type": "string"
+    },
+    "destaquesIcones": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.icone-label",
+      "required": true
+    },
+    "imagem": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

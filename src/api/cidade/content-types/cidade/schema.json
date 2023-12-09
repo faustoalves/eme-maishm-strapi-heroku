@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cidades",
+  "info": {
+    "singularName": "cidade",
+    "pluralName": "cidades",
+    "displayName": "-- Cidades",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cidade": {
+      "type": "string"
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "MG",
+        "SP"
+      ],
+      "default": "SP",
+      "required": true
+    },
+    "slug": {
+      "type": "string"
+    },
+    "empreendimentos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::empreendimento.empreendimento",
+      "mappedBy": "cidade"
+    }
+  }
+}

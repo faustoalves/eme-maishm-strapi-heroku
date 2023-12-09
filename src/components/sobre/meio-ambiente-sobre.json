@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sobre_meio_ambiente_sobres",
+  "info": {
+    "displayName": "MeioAmbienteSobre"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    },
+    "lista": {
+      "displayName": "MeioAmbienteItemSobre",
+      "type": "component",
+      "repeatable": true,
+      "component": "sobre.meio-ambiente-item-sobre",
+      "required": true
+    }
+  }
+}

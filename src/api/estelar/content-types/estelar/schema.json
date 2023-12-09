@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "estelars",
+  "info": {
+    "singularName": "estelar",
+    "pluralName": "estelars",
+    "displayName": "-- CTA Estelar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "tituloFormulario": {
+      "type": "string"
+    },
+    "labelUsuario": {
+      "type": "string"
+    },
+    "labelSenha": {
+      "type": "string"
+    },
+    "labelEsqueciSenha": {
+      "type": "string"
+    },
+    "labelQueroCadastrar": {
+      "type": "string"
+    },
+    "labelLogin": {
+      "type": "string"
+    },
+    "labelAcessar": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_mcmv_banner_mcmvs",
+  "info": {
+    "displayName": "BannerMCMV",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "imagem": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "botoes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.botao",
+      "required": true,
+      "min": 1
+    }
+  }
+}

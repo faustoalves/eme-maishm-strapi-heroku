@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_sobre_meio_ambiente_item_sobres",
+  "info": {
+    "displayName": "MeioAmbienteItemSobre"
+  },
+  "options": {},
+  "attributes": {
+    "imagem": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

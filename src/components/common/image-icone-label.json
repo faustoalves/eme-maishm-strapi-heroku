@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_common_image_icone_labels",
+  "info": {
+    "displayName": "ImageIconeLabel",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icone": {
+      "type": "customField",
+      "options": {
+        "enumType": "destaque-produtos"
+      },
+      "customField": "plugin::custom-enum.custom-enum",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "imagem": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

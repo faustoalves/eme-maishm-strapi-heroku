@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sobre_banner_sobre_destaques",
+  "info": {
+    "displayName": "BannerSobreDestaques"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

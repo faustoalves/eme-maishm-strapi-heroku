@@ -1,0 +1,68 @@
+{
+  "status": "success",
+  "response_data": {
+    "cities": [
+      { "city": "Araraquara", "neighborhoods": ["Jardim Roberto Selmi"] },
+      {
+        "city": "Campinas",
+        "neighborhoods": [
+          "Jardim Ibirapuera",
+          "Loteamento Fazenda Lagoa",
+          "Ouro Verde",
+          "Ouro Verde",
+          "Parque São Jorge",
+          "Residencial Moradas do Valle",
+          "Vila Industrial",
+          "Vila Industrial",
+          "Vila Industrial"
+        ]
+      },
+      { "city": "Colina", "neighborhoods": ["Cohab 1", "Jardim Primavera"] },
+      {
+        "city": "Extrema",
+        "neighborhoods": ["Ponte Nova"]
+      },
+      { "city": "Guapiaçú", "neighborhoods": ["Próximo ao Centro"] },
+      { "city": "Guarujá", "neighborhoods": ["Morrinhos", "Parque Enseada"] },
+      {
+        "city": "Hortolândia",
+        "neighborhoods": [
+          "Jardim do Bosque",
+          "Jardim Ricardo",
+          "Loteamento Jardim das Flores"
+        ]
+      },
+      { "city": "Itupeva", "neighborhoods": ["Bairro da Mina"] },
+      { "city": "Jundiaí", "neighborhoods": [""] },
+      { "city": "Limeira", "neighborhoods": ["Anavec ", "Vila Queiroz"] },
+      { "city": "Mogi das Cruzes", "neighborhoods": ["Bairro Fonte Sônia"] },
+      { "city": "Osasco", "neighborhoods": [""] },
+      {
+        "city": "Paulínia",
+        "neighborhoods": [
+          "Bairro Dona Edith de Campos Fávaro",
+          "Chácara Nossa Senhora Auxiliadora",
+          "Nova Veneza"
+        ]
+      },
+      { "city": "Praia Grande", "neighborhoods": ["Vila Sonia"] },
+      { "city": "Salto", "neighborhoods": [""] },
+      {
+        "city": "Santa Bárbara d'Oeste",
+        "neighborhoods": ["Candido Bertine", "Jardim Firenze"]
+      },
+      { "city": "São Carlos", "neighborhoods": ["Jardim Jockey Club"] },
+      {
+        "city": "São Paulo",
+        "neighborhoods": [
+          "Jardim São Paulo",
+          "Jardim Ubirajara",
+          "Parque Maria Helena",
+          "Vila Andrade",
+          "Vila Andrade"
+        ]
+      },
+      { "city": "Sorocaba", "neighborhoods": ["Bairro Jardim Nikkey"] }
+    ]
+  }
+}

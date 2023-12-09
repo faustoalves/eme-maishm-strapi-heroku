@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_common_botaos",
+  "info": {
+    "displayName": "Botao"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_mcmv_simulacao_mcmvs",
+  "info": {
+    "displayName": "SimulacaoMCMV"
+  },
+  "options": {},
+  "attributes": {
+    "imagem": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    },
+    "botao": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.botao",
+      "required": true
+    }
+  }
+}

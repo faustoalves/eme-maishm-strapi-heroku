@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_mcmv_taxas_juros_mcmvs",
+  "info": {
+    "displayName": "TaxasJurosMCMV"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    }
+  }
+}

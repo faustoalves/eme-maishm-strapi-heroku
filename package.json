@@ -6,7 +6,7 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "yarn && npm run build --prefix src/plugins/custom-enum && strapi build",
+    "build": "npm run build --prefix src/plugins/custom-enum && strapi build",
     "strapi": "strapi"
   },
   "dependencies": {

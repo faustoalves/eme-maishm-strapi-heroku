@@ -1,5 +1,8 @@
 import { factories } from "@strapi/strapi";
-import { getEmpreendimentosList } from "../../../collections/empreendimentos";
+import {
+  getCardsList,
+  getEmpreendimentosList,
+} from "../../../collections/empreendimentos";
 import { parseCardEmpreendimento } from "../../../parses/empreendimento";
 const { createCoreController } = require("@strapi/strapi").factories;
 
@@ -24,12 +27,13 @@ export default factories.createCoreController(
           return entities.map((entity) => {
             return parseCardEmpreendimento(entity);
           });
-        }
+        },
       );
       return entities;
     },
     async getByFilter(ctx) {
-      let { cidade, tipo, status, venda } = ctx.query;
+      console.log("getByFilter");
+      let { cidade, tipo, status, venda, bairro } = ctx.query;
       let filter: any = {};
       if (cidade) {
         let city = await strapi.entityService.findMany("api::cidade.cidade", {
@@ -44,16 +48,28 @@ export default factories.createCoreController(
         }
         filter.cidade = city[0].id;
       }
+      console.log(bairro);
+      if (bairro) {
+        let neighbor = await strapi.entityService.findMany(
+          "api::bairro.bairro",
+          {
+            filters: {
+              slug: {
+                $eqi: bairro,
+              },
+            },
+          },
+        );
+        if (neighbor.length === 0) {
+          return {};
+        }
+        filter.bairro = neighbor[0].id;
+      }
+      console.log(filter.bairro);
       if (tipo) filter.tipoEmpreendimento = tipo;
       if (status) filter.statusObra = status;
       if (venda) filter.statusVenda = venda;
-      let entities = await getEmpreendimentosList(filter, strapi).then(
-        (entities) => {
-          return entities.map((entity) => {
-            return parseCardEmpreendimento(entity);
-          });
-        }
-      );
+      let entities = await getCardsList(filter, strapi);
       return entities;
     },
     async getBySlug(ctx) {
@@ -61,5 +77,5 @@ export default factories.createCoreController(
       let entities = await getEmpreendimentosList({ slug }, strapi);
       return entities;
     },
-  })
+  }),
 );

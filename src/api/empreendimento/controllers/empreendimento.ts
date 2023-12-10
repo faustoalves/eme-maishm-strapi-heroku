@@ -35,6 +35,7 @@ export default factories.createCoreController(
       console.log("getByFilter");
       let { cidade, tipo, status, venda, bairro } = ctx.query;
       let filter: any = {};
+      let searchKeys = [];
       if (cidade) {
         let city = await strapi.entityService.findMany("api::cidade.cidade", {
           filters: {
@@ -47,6 +48,7 @@ export default factories.createCoreController(
           return {};
         }
         filter.cidade = city[0].id;
+        searchKeys.push(city[0].cidade);
       }
       console.log(bairro);
       if (bairro) {
@@ -64,13 +66,27 @@ export default factories.createCoreController(
           return {};
         }
         filter.bairro = neighbor[0].id;
+        searchKeys.push(neighbor[0].bairro);
       }
       console.log(filter.bairro);
-      if (tipo) filter.tipoEmpreendimento = tipo;
-      if (status) filter.statusObra = status;
-      if (venda) filter.statusVenda = venda;
+      if (tipo) {
+        filter.tipoEmpreendimento = tipo;
+        searchKeys.push(tipo);
+      }
+      if (status) {
+        filter.statusObra = status;
+        searchKeys.push(status);
+      }
+      if (venda) {
+        filter.statusVenda = venda;
+        searchKeys.push(venda);
+      }
       let entities = await getCardsList(filter, strapi);
-      return entities;
+      return {
+        terms: searchKeys,
+        total: entities.length,
+        entities: entities,
+      };
     },
     async getBySlug(ctx) {
       let { slug } = ctx.query;

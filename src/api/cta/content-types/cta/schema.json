@@ -12,19 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
     "tipo": {
       "type": "enumeration",
-      "enum": [
-        "central",
-        "mcmv",
-        "financiamento",
-        "fale-com-a-eme"
-      ],
+      "enum": ["central", "mcmv", "financiamento", "fale-com-a-eme"],
       "default": "central",
       "required": true
     },
     "titulo": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "conteudo": {
       "type": "customField",
@@ -41,9 +41,7 @@
       "type": "string"
     },
     "icone": {
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false
     }

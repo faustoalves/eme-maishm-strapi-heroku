@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_central_telefone_centrals",
+  "info": {
+    "displayName": "TelefoneCentral"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "telefonePrincipalNumero": {
+      "type": "string"
+    },
+    "telefonePrincipalInformacao": {
+      "type": "string"
+    },
+    "telefoneSecundarioNumero": {
+      "type": "string"
+    },
+    "telefoneSecundarioInformacao": {
+      "type": "string"
+    },
+    "escritorioLabel": {
+      "type": "string"
+    },
+    "escritorioLocal": {
+      "type": "string"
+    },
+    "escritorioEndereco": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

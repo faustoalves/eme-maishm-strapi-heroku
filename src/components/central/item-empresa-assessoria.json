@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_central_item_empresa_assessorias",
+  "info": {
+    "displayName": "itemEmpresaAssessoria"
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "telefone": {
+      "type": "string"
+    }
+  }
+}

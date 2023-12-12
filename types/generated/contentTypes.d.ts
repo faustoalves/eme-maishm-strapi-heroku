@@ -712,6 +712,46 @@ export interface ApiBairroBairro extends Schema.CollectionType {
   };
 }
 
+export interface ApiCentralAtendimentoCentralAtendimento
+  extends Schema.SingleType {
+  collectionName: 'central_atendimentos';
+  info: {
+    singularName: 'central-atendimento';
+    pluralName: 'central-atendimentos';
+    displayName: ' - Central de Atendimento';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    botoes: Attribute.Component<'central.botoes-central', true>;
+    ct_a: Attribute.Relation<
+      'api::central-atendimento.central-atendimento',
+      'oneToOne',
+      'api::cta.cta'
+    >;
+    telefones: Attribute.Component<'central.telefone-central'>;
+    tituloRedesSociais: Attribute.String;
+    tituloAssessoria: Attribute.String;
+    grupoAssessoria: Attribute.Component<'central.assessoria-central', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::central-atendimento.central-atendimento',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::central-atendimento.central-atendimento',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCidadeCidade extends Schema.CollectionType {
   collectionName: 'cidades';
   info: {
@@ -763,12 +803,13 @@ export interface ApiCtaCta extends Schema.CollectionType {
     draftAndPublish: false;
   };
   attributes: {
+    nome: Attribute.String & Attribute.Required;
     tipo: Attribute.Enumeration<
       ['central', 'mcmv', 'financiamento', 'fale-com-a-eme']
     > &
       Attribute.Required &
       Attribute.DefaultTo<'central'>;
-    titulo: Attribute.String;
+    titulo: Attribute.String & Attribute.Required;
     conteudo: Attribute.RichText &
       Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
@@ -1105,7 +1146,7 @@ export interface ApiMcmvMcmv extends Schema.SingleType {
     seo: Attribute.Component<'common.seo'> & Attribute.Required;
     vantagens: Attribute.Component<'mcmv.vantagens-mcmv'> & Attribute.Required;
     banner: Attribute.Component<'mcmv.banner-mcmv'> & Attribute.Required;
-    simulcacao: Attribute.Component<'mcmv.simulacao-mcmv'> & Attribute.Required;
+    simulacao: Attribute.Component<'mcmv.simulacao-mcmv'> & Attribute.Required;
     faixas: Attribute.Component<'mcmv.faixas-mcmv'>;
     taxasJuros: Attribute.Component<'mcmv.taxas-juros-mcmv'>;
     duvidas: Attribute.Component<'mcmv.duvidas-mcmv'> & Attribute.Required;
@@ -1436,6 +1477,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::bairro.bairro': ApiBairroBairro;
+      'api::central-atendimento.central-atendimento': ApiCentralAtendimentoCentralAtendimento;
       'api::cidade.cidade': ApiCidadeCidade;
       'api::cta.cta': ApiCtaCta;
       'api::demonstrativo-financeiro.demonstrativo-financeiro': ApiDemonstrativoFinanceiroDemonstrativoFinanceiro;

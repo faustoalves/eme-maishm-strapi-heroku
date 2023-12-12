@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "central_atendimentos",
+  "info": {
+    "singularName": "central-atendimento",
+    "pluralName": "central-atendimentos",
+    "displayName": " - Central de Atendimento",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "botoes": {
+      "displayName": "BotoesCentral",
+      "type": "component",
+      "repeatable": true,
+      "component": "central.botoes-central"
+    },
+    "ct_a": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cta.cta"
+    },
+    "telefones": {
+      "displayName": "TelefoneCentral",
+      "type": "component",
+      "repeatable": false,
+      "component": "central.telefone-central"
+    },
+    "tituloRedesSociais": {
+      "type": "string"
+    },
+    "tituloAssessoria": {
+      "type": "string"
+    },
+    "grupoAssessoria": {
+      "displayName": "AssessoriaCentral",
+      "type": "component",
+      "repeatable": true,
+      "component": "central.assessoria-central"
+    }
+  }
+}

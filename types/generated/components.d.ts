@@ -1,5 +1,77 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CentralAssessoriaCentral extends Schema.Component {
+  collectionName: 'components_central_assessoria_centrals';
+  info: {
+    displayName: 'AssessoriaCentral';
+  };
+  attributes: {
+    empresa: Attribute.String;
+    nome: Attribute.Component<'central.item-empresa-assessoria'>;
+  };
+}
+
+export interface CentralBotoesCentral extends Schema.Component {
+  collectionName: 'components_central_botoes_centrals';
+  info: {
+    displayName: 'BotoesCentral';
+  };
+  attributes: {
+    label: Attribute.String;
+    link: Attribute.String;
+    icone: Attribute.String &
+      Attribute.CustomField<
+        'plugin::custom-enum.custom-enum',
+        {
+          enumType: 'destaque-produtos';
+        }
+      >;
+  };
+}
+
+export interface CentralItemEmpresaAssessoria extends Schema.Component {
+  collectionName: 'components_central_item_empresa_assessorias';
+  info: {
+    displayName: 'itemEmpresaAssessoria';
+  };
+  attributes: {
+    email: Attribute.String;
+    telefone: Attribute.String;
+  };
+}
+
+export interface CentralTelefoneCentral extends Schema.Component {
+  collectionName: 'components_central_telefone_centrals';
+  info: {
+    displayName: 'TelefoneCentral';
+  };
+  attributes: {
+    titulo: Attribute.String;
+    conteudo: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
+    telefonePrincipalNumero: Attribute.String;
+    telefonePrincipalInformacao: Attribute.String;
+    telefoneSecundarioNumero: Attribute.String;
+    telefoneSecundarioInformacao: Attribute.String;
+    escritorioLabel: Attribute.String;
+    escritorioLocal: Attribute.String;
+    escritorioEndereco: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
+  };
+}
+
 export interface CommonBotao extends Schema.Component {
   collectionName: 'components_common_botaos';
   info: {
@@ -929,6 +1001,10 @@ export interface SobreTecnologiaSobre extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'central.assessoria-central': CentralAssessoriaCentral;
+      'central.botoes-central': CentralBotoesCentral;
+      'central.item-empresa-assessoria': CentralItemEmpresaAssessoria;
+      'central.telefone-central': CentralTelefoneCentral;
       'common.botao': CommonBotao;
       'common.download-item': CommonDownloadItem;
       'common.icone-label': CommonIconeLabel;

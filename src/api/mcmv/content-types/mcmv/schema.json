@@ -31,7 +31,7 @@
       "component": "mcmv.banner-mcmv",
       "required": true
     },
-    "simulcacao": {
+    "simulacao": {
       "displayName": "SimulacaoMCMV",
       "type": "component",
       "repeatable": false,

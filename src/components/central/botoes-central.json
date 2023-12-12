@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_central_botoes_centrals",
+  "info": {
+    "displayName": "BotoesCentral"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "icone": {
+      "type": "customField",
+      "options": {
+        "enumType": "destaque-produtos"
+      },
+      "customField": "plugin::custom-enum.custom-enum"
+    }
+  }
+}

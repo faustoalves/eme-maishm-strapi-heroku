@@ -1,11 +1,9 @@
+import { GetKeys, GetValues } from "@strapi/types/dist/types/core/attributes";
 import { parseImage } from "./image";
 
-export const parseSeo = (seo) => {
-  return {
-    title: seo.title,
-    description: seo.description,
-    canonical: seo.canonical,
-    indexFollow: seo.indexFollow,
-    shareImage: parseImage(seo.shareImage),
-  };
+export const parseSeo = (
+  seo: GetValues<"common.seo", GetKeys<"common.seo">>,
+) => {
+  seo.shareImage = parseImage(seo.shareImage);
+  return seo;
 };

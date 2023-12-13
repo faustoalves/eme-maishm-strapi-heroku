@@ -1,6 +1,7 @@
 const apiType = "api::home.home";
 
 import { factories } from "@strapi/strapi";
+import { getAllCitiesByState } from "../../../collections/cidades";
 import { getEstelar } from "../../../collections/estelar";
 import { parseImage } from "../../../parses/common/image";
 import { parseSeo } from "../../../parses/common/seo";
@@ -34,7 +35,7 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
       item.desktopImage = parseImage(item.desktopImage);
       return item;
     });
-    // let cidades = await getAllCitiesByState(strapi);
+    let cidades = await getAllCitiesByState(strapi);
     let estelar = await getEstelar(strapi);
     entity.ctas = entity.ctas.map((item) => parseCTA(item));
     delete entity.id;
@@ -43,7 +44,7 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
     return {
       ...entity,
       estelar: estelar,
-      // ondeMorar: { ...entity.ondeMorar, cidades: cidades },
+      ondeMorar: { ...entity.ondeMorar, cidades: cidades },
     };
   },
 }));

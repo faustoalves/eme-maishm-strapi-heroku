@@ -1,5 +1,4 @@
 import { factories } from "@strapi/strapi";
-import _ from "lodash";
 import {
   getCardsList,
   getEmpreendimentosList,
@@ -177,7 +176,7 @@ export default factories.createCoreController(
       entity.implantacao.imagem = parseImage(entity.implantacao.imagem);
       entity.localizacao.imagem = parseImage(entity.localizacao.imagem);
       let estelar = await getEstelar(strapi);
-      return _.merge(entity, { estelar: estelar });
+      return entity;
     },
   }),
 );

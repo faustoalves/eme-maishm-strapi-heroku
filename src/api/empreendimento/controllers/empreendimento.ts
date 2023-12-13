@@ -98,6 +98,15 @@ export default factories.createCoreController(
         "api::empreendimento.empreendimento",
         {
           filters: { slug: slug },
+        },
+      );
+      if (entities.length === 0) {
+        return null;
+      }
+      let entity = await strapi.entityService.findOne(
+        "api::empreendimento.empreendimento",
+        entities[0].id,
+        {
           populate: {
             seo: {
               populate: "*",
@@ -146,10 +155,6 @@ export default factories.createCoreController(
           },
         },
       );
-      if (entities.length === 0) {
-        return null;
-      }
-      let entity = entities[0];
       entity.seo = parseSeo(entity.seo);
       entity.cta = entity.cta ? parseCTA(entity.cta) : null;
       entity.banner.background = entity.banner.background

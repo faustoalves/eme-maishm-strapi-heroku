@@ -1,7 +1,6 @@
 const apiType = "api::home.home";
 
 import { factories } from "@strapi/strapi";
-import _ from "lodash";
 import { getAllCitiesByState } from "../../../collections/cidades";
 import { getEstelar } from "../../../collections/estelar";
 import { parseImage } from "../../../parses/common/image";
@@ -42,10 +41,10 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
     delete entity.id;
     delete entity.createdAt;
     delete entity.updatedAt;
-    return _.merge(
-      entity,
-      { estelar: estelar },
-      { ondeMorar: { cidades: cidades } },
-    );
+    return {
+      ...entity,
+      estelar: estelar,
+      ondeMorar: { ...entity.ondeMorar, cidades: cidades },
+    };
   },
 }));

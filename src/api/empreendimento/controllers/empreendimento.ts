@@ -176,7 +176,7 @@ export default factories.createCoreController(
       entity.implantacao.imagem = parseImage(entity.implantacao.imagem);
       entity.localizacao.imagem = parseImage(entity.localizacao.imagem);
       let estelar = await getEstelar(strapi);
-      return entity;
+      return { ...entity, estelar: estelar };
     },
   }),
 );

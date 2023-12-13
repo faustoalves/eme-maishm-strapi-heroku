@@ -726,7 +726,7 @@ export interface ApiCentralAtendimentoCentralAtendimento
   };
   attributes: {
     botoes: Attribute.Component<'central.botoes-central', true>;
-    ct_a: Attribute.Relation<
+    cta: Attribute.Relation<
       'api::central-atendimento.central-atendimento',
       'oneToOne',
       'api::cta.cta'

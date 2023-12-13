@@ -1,9 +1,12 @@
 const apiType = "api::home.home";
 
 import { factories } from "@strapi/strapi";
+import _ from "lodash";
+import { getAllCitiesByState } from "../../../collections/cidades";
 import { getEstelar } from "../../../collections/estelar";
 import { parseImage } from "../../../parses/common/image";
 import { parseSeo } from "../../../parses/common/seo";
+import { parseCTA } from "../../../parses/cta";
 
 export default factories.createCoreController(apiType, ({ strapi }) => ({
   async getContent(ctx) {
@@ -33,19 +36,16 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
       item.desktopImage = parseImage(item.desktopImage);
       return item;
     });
+    let cidades = await getAllCitiesByState(strapi);
     let estelar = await getEstelar(strapi);
-    entity.ctas = entity.ctas.map((item) => {
-      delete item.createdAt;
-      delete item.updatedAt;
-      delete item.createdBy;
-      delete item.updatedBy;
-      delete item.nome;
-      item.icone = parseImage(item.icone);
-      return item;
-    });
+    entity.ctas = entity.ctas.map((item) => parseCTA(item));
     delete entity.id;
     delete entity.createdAt;
     delete entity.updatedAt;
-    return { ...entity, estelar: estelar };
+    return _.merge(
+      entity,
+      { estelar: estelar },
+      { ondeMorar: { cidades: cidades } },
+    );
   },
 }));

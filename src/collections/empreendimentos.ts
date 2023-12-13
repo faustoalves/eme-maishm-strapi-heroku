@@ -1,11 +1,21 @@
+import {
+  GetNonPopulatableKeys,
+  GetValues,
+} from "@strapi/types/dist/types/core/attributes";
 import { parseImage } from "../parses/common/image";
-
 export const getEmpreendimentosList = async (filter, strapi) => {
-  let entities = await strapi.entityService.findMany(
+  let entities: GetValues<
+    "api::empreendimento.empreendimento",
+    GetNonPopulatableKeys<"api::empreendimento.empreendimento">
+  >[] = await strapi.entityService.findMany(
     "api::empreendimento.empreendimento",
     {
       filters: filter,
-      populate: "deep",
+      populate: {
+        seo: {
+          populate: "*",
+        },
+      },
     },
   );
   return entities;

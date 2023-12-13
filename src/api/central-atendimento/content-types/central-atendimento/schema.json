@@ -18,7 +18,7 @@
       "repeatable": true,
       "component": "central.botoes-central"
     },
-    "ct_a": {
+    "cta": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cta.cta"

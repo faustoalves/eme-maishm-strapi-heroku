@@ -1,8 +1,13 @@
 import { factories } from "@strapi/strapi";
+import _ from "lodash";
 import {
   getCardsList,
   getEmpreendimentosList,
 } from "../../../collections/empreendimentos";
+import { getEstelar } from "../../../collections/estelar";
+import { parseImage } from "../../../parses/common/image";
+import { parseSeo } from "../../../parses/common/seo";
+import { parseCTA } from "../../../parses/cta";
 import { parseCardEmpreendimento } from "../../../parses/empreendimento";
 const { createCoreController } = require("@strapi/strapi").factories;
 
@@ -150,30 +155,29 @@ export default factories.createCoreController(
           },
         },
       );
-      // entity.seo = parseSeo(entity.seo);
-      // entity.cta = entity.cta ? parseCTA(entity.cta) : null;
-      // entity.banner.background = entity.banner.background
-      //   ? parseImage(entity.banner.background)
-      //   : null;
-      // entity.banner.logoEmpreendimento = entity.banner.logoEmpreendimento
-      //   ? parseImage(entity.banner.logoEmpreendimento)
-      //   : null;
-      // entity.fotosItens = entity.fotosItens.map((fotos) => {
-      //   fotos.grupos = fotos.grupos.map((grupo) => {
-      //     grupo.imagem = parseImage(grupo.imagem);
-      //     return grupo;
-      //   });
-      //   return fotos;
-      // });
-      // entity.plantasItem = entity.plantasItem.map((item) => {
-      //   item.imagem = parseImage(item.imagem);
-      //   return item;
-      // });
-      // entity.implantacao.imagem = parseImage(entity.implantacao.imagem);
-      // entity.localizacao.imagem = parseImage(entity.localizacao.imagem);
-      // let estelar = await getEstelar(strapi);
-      return entity;
-      // return _.merge(entity, { estelar: estelar });
+      entity.seo = parseSeo(entity.seo);
+      entity.cta = entity.cta ? parseCTA(entity.cta) : null;
+      entity.banner.background = entity.banner.background
+        ? parseImage(entity.banner.background)
+        : null;
+      entity.banner.logoEmpreendimento = entity.banner.logoEmpreendimento
+        ? parseImage(entity.banner.logoEmpreendimento)
+        : null;
+      entity.fotosItens = entity.fotosItens.map((fotos) => {
+        fotos.grupos = fotos.grupos.map((grupo) => {
+          grupo.imagem = parseImage(grupo.imagem);
+          return grupo;
+        });
+        return fotos;
+      });
+      entity.plantasItem = entity.plantasItem.map((item) => {
+        item.imagem = parseImage(item.imagem);
+        return item;
+      });
+      entity.implantacao.imagem = parseImage(entity.implantacao.imagem);
+      entity.localizacao.imagem = parseImage(entity.localizacao.imagem);
+      let estelar = await getEstelar(strapi);
+      return _.merge(entity, { estelar: estelar });
     },
   }),
 );

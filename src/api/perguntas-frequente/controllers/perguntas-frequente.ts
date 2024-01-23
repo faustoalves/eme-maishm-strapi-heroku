@@ -9,6 +9,9 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
         grupos: {
           populate: "*",
         },
+        cta: {
+          populate: "*",
+        },
       },
     });
     return entity;

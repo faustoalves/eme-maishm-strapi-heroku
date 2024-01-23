@@ -222,6 +222,7 @@ export interface EmpreendimentoFinanciamento extends Schema.Component {
         min: 1;
         max: 3;
       }>;
+    imagem: Attribute.Media & Attribute.Required;
   };
 }
 

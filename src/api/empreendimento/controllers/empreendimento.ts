@@ -113,6 +113,12 @@ export default factories.createCoreController(
             bot: {
               populate: "*",
             },
+            cidade: {
+              populate: "*",
+            },
+            bairro: {
+              populate: "*",
+            },
             banner: {
               populate: {
                 iconesDestaques: {

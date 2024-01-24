@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "seja_um_fornecedors",
+  "info": {
+    "singularName": "seja-um-fornecedor",
+    "pluralName": "seja-um-fornecedors",
+    "displayName": "-- Seja um Fornecedor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "cta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cta.cta"
+    }
+  }
+}

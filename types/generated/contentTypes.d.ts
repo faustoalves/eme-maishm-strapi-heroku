@@ -1096,19 +1096,6 @@ export interface ApiHomeEmpreendimentoHomeEmpreendimento
   };
   attributes: {
     seo: Attribute.Component<'common.seo'> & Attribute.Required;
-    ondeMorar: Attribute.Component<'home.onde-morar'> & Attribute.Required;
-    banner: Attribute.Component<'home.banner-principal'> & Attribute.Required;
-    jeitoMorar: Attribute.Component<'empreendimentos.jeito-morar'> &
-      Attribute.Required;
-    jeitoMorarLista: Attribute.Component<
-      'empreendimentos.jeito-morar-item',
-      true
-    > &
-      Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 4;
-        max: 5;
-      }>;
     ctas: Attribute.Relation<
       'api::home-empreendimento.home-empreendimento',
       'oneToMany',
@@ -1419,6 +1406,49 @@ export interface ApiSearchSearch extends Schema.SingleType {
   };
 }
 
+export interface ApiSejaUmFornecedorSejaUmFornecedor extends Schema.SingleType {
+  collectionName: 'seja_um_fornecedors';
+  info: {
+    singularName: 'seja-um-fornecedor';
+    pluralName: 'seja-um-fornecedors';
+    displayName: '-- Seja um Fornecedor';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    titulo: Attribute.String;
+    conteudo: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
+    cta: Attribute.Relation<
+      'api::seja-um-fornecedor.seja-um-fornecedor',
+      'oneToOne',
+      'api::cta.cta'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::seja-um-fornecedor.seja-um-fornecedor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::seja-um-fornecedor.seja-um-fornecedor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSobreSobre extends Schema.SingleType {
   collectionName: 'sobres';
   info: {
@@ -1460,6 +1490,49 @@ export interface ApiSobreSobre extends Schema.SingleType {
   };
 }
 
+export interface ApiVendaSuaAreaVendaSuaArea extends Schema.SingleType {
+  collectionName: 'venda_sua_areas';
+  info: {
+    singularName: 'venda-sua-area';
+    pluralName: 'venda-sua-areas';
+    displayName: '-- Venda sua \u00C1rea';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    titulo: Attribute.String;
+    conteudo: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
+    cta: Attribute.Relation<
+      'api::venda-sua-area.venda-sua-area',
+      'oneToOne',
+      'api::cta.cta'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::venda-sua-area.venda-sua-area',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::venda-sua-area.venda-sua-area',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1493,7 +1566,9 @@ declare module '@strapi/types' {
       'api::politica.politica': ApiPoliticaPolitica;
       'api::promo-regulamento.promo-regulamento': ApiPromoRegulamentoPromoRegulamento;
       'api::search.search': ApiSearchSearch;
+      'api::seja-um-fornecedor.seja-um-fornecedor': ApiSejaUmFornecedorSejaUmFornecedor;
       'api::sobre.sobre': ApiSobreSobre;
+      'api::venda-sua-area.venda-sua-area': ApiVendaSuaAreaVendaSuaArea;
     }
   }
 }

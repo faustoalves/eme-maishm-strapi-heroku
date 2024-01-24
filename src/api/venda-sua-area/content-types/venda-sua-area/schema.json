@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "venda_sua_areas",
+  "info": {
+    "singularName": "venda-sua-area",
+    "pluralName": "venda-sua-areas",
+    "displayName": "-- Venda sua Área",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "cta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cta.cta"
+    }
+  }
+}

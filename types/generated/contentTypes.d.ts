@@ -1411,7 +1411,7 @@ export interface ApiSejaUmFornecedorSejaUmFornecedor extends Schema.SingleType {
   info: {
     singularName: 'seja-um-fornecedor';
     pluralName: 'seja-um-fornecedors';
-    displayName: '-- Seja um Fornecedor';
+    displayName: '- Seja um Fornecedor';
     description: '';
   };
   options: {
@@ -1495,7 +1495,7 @@ export interface ApiVendaSuaAreaVendaSuaArea extends Schema.SingleType {
   info: {
     singularName: 'venda-sua-area';
     pluralName: 'venda-sua-areas';
-    displayName: '-- Venda sua \u00C1rea';
+    displayName: '- Venda sua \u00C1rea';
     description: '';
   };
   options: {

@@ -4,10 +4,11 @@ export interface CentralAssessoriaCentral extends Schema.Component {
   collectionName: 'components_central_assessoria_centrals';
   info: {
     displayName: 'AssessoriaCentral';
+    description: '';
   };
   attributes: {
     empresa: Attribute.String;
-    nome: Attribute.Component<'central.item-empresa-assessoria'>;
+    itens: Attribute.Component<'central.item-empresa-assessoria', true>;
   };
 }
 
@@ -35,6 +36,7 @@ export interface CentralItemEmpresaAssessoria extends Schema.Component {
     displayName: 'itemEmpresaAssessoria';
   };
   attributes: {
+    nome: Attribute.String;
     email: Attribute.String;
     telefone: Attribute.String;
   };

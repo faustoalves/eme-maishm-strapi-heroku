@@ -1,17 +1,18 @@
 {
   "collectionName": "components_central_assessoria_centrals",
   "info": {
-    "displayName": "AssessoriaCentral"
+    "displayName": "AssessoriaCentral",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "empresa": {
       "type": "string"
     },
-    "nome": {
+    "itens": {
       "displayName": "itemEmpresaAssessoria",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "central.item-empresa-assessoria"
     }
   }

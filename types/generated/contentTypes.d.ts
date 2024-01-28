@@ -725,6 +725,7 @@ export interface ApiCentralAtendimentoCentralAtendimento
     draftAndPublish: false;
   };
   attributes: {
+    seo: Attribute.Component<'common.seo'> & Attribute.Required;
     botoes: Attribute.Component<'central.botoes-central', true>;
     cta: Attribute.Relation<
       'api::central-atendimento.central-atendimento',

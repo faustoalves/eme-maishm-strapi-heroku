@@ -12,6 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.seo",
+      "required": true
+    },
     "titulo": {
       "type": "string"
     },

@@ -596,6 +596,7 @@ export interface McmvTaxasJurosMcmv extends Schema.Component {
           preset: 'light';
         }
       >;
+    botao: Attribute.Component<'common.botao'> & Attribute.Required;
   };
 }
 

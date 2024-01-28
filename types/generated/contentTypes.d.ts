@@ -1131,11 +1131,12 @@ export interface ApiMcmvMcmv extends Schema.SingleType {
   };
   attributes: {
     seo: Attribute.Component<'common.seo'> & Attribute.Required;
-    vantagens: Attribute.Component<'mcmv.vantagens-mcmv'> & Attribute.Required;
     banner: Attribute.Component<'mcmv.banner-mcmv'> & Attribute.Required;
+    vantagens: Attribute.Component<'mcmv.vantagens-mcmv'> & Attribute.Required;
     simulacao: Attribute.Component<'mcmv.simulacao-mcmv'> & Attribute.Required;
-    faixas: Attribute.Component<'mcmv.faixas-mcmv'>;
-    taxasJuros: Attribute.Component<'mcmv.taxas-juros-mcmv'>;
+    faixas: Attribute.Component<'mcmv.faixas-mcmv'> & Attribute.Required;
+    taxasJuros: Attribute.Component<'mcmv.taxas-juros-mcmv'> &
+      Attribute.Required;
     duvidas: Attribute.Component<'mcmv.duvidas-mcmv'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1418,6 +1419,7 @@ export interface ApiSejaUmFornecedorSejaUmFornecedor extends Schema.SingleType {
     draftAndPublish: false;
   };
   attributes: {
+    seo: Attribute.Component<'common.seo'> & Attribute.Required;
     titulo: Attribute.String;
     conteudo: Attribute.RichText &
       Attribute.CustomField<
@@ -1502,6 +1504,7 @@ export interface ApiVendaSuaAreaVendaSuaArea extends Schema.SingleType {
     draftAndPublish: false;
   };
   attributes: {
+    seo: Attribute.Component<'common.seo'> & Attribute.Required;
     titulo: Attribute.String;
     conteudo: Attribute.RichText &
       Attribute.CustomField<

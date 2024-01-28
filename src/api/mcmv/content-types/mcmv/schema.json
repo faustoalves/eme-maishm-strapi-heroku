@@ -18,17 +18,17 @@
       "component": "common.seo",
       "required": true
     },
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "mcmv.banner-mcmv",
+      "required": true
+    },
     "vantagens": {
       "displayName": "VantagensMCMV",
       "type": "component",
       "repeatable": false,
       "component": "mcmv.vantagens-mcmv",
-      "required": true
-    },
-    "banner": {
-      "type": "component",
-      "repeatable": false,
-      "component": "mcmv.banner-mcmv",
       "required": true
     },
     "simulacao": {
@@ -42,13 +42,15 @@
       "displayName": "FaixasMCMV",
       "type": "component",
       "repeatable": false,
-      "component": "mcmv.faixas-mcmv"
+      "component": "mcmv.faixas-mcmv",
+      "required": true
     },
     "taxasJuros": {
       "displayName": "TaxasJurosMCMV",
       "type": "component",
       "repeatable": false,
-      "component": "mcmv.taxas-juros-mcmv"
+      "component": "mcmv.taxas-juros-mcmv",
+      "required": true
     },
     "duvidas": {
       "displayName": "duvidasMCMV",

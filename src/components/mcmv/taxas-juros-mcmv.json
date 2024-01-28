@@ -17,6 +17,12 @@
       },
       "customField": "plugin::ckeditor.CKEditor",
       "required": true
+    },
+    "botao": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.botao",
+      "required": true
     }
   }
 }

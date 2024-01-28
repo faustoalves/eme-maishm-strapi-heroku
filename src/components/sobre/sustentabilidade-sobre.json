@@ -1,7 +1,8 @@
 {
   "collectionName": "components_sobre_sustentabilidade_sobres",
   "info": {
-    "displayName": "SustentabilidadeSobre"
+    "displayName": "SustentabilidadeSobre",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -17,6 +18,12 @@
       },
       "required": true,
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "itens": {
+      "displayName": "SustentabilidadeSobreItens",
+      "type": "component",
+      "repeatable": true,
+      "component": "sobre.sustentabilidade-sobre-itens"
     }
   }
 }

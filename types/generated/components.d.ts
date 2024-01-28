@@ -972,10 +972,22 @@ export interface SobrePremiosSobre extends Schema.Component {
   };
 }
 
+export interface SobreSustentabilidadeSobreItens extends Schema.Component {
+  collectionName: 'components_sobre_sustentabilidade_sobre_itens';
+  info: {
+    displayName: 'SustentabilidadeSobreItens';
+  };
+  attributes: {
+    nome: Attribute.String;
+    imagem: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface SobreSustentabilidadeSobre extends Schema.Component {
   collectionName: 'components_sobre_sustentabilidade_sobres';
   info: {
     displayName: 'SustentabilidadeSobre';
+    description: '';
   };
   attributes: {
     titulo: Attribute.String & Attribute.Required;
@@ -988,6 +1000,7 @@ export interface SobreSustentabilidadeSobre extends Schema.Component {
           preset: 'light';
         }
       >;
+    itens: Attribute.Component<'sobre.sustentabilidade-sobre-itens', true>;
   };
 }
 
@@ -1064,6 +1077,7 @@ declare module '@strapi/types' {
       'sobre.onde-estamos-sobre': SobreOndeEstamosSobre;
       'sobre.premios-item-sobre': SobrePremiosItemSobre;
       'sobre.premios-sobre': SobrePremiosSobre;
+      'sobre.sustentabilidade-sobre-itens': SobreSustentabilidadeSobreItens;
       'sobre.sustentabilidade-sobre': SobreSustentabilidadeSobre;
       'sobre.tecnologia-sobre': SobreTecnologiaSobre;
     }

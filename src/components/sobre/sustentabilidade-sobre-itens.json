@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sobre_sustentabilidade_sobre_itens",
+  "info": {
+    "displayName": "SustentabilidadeSobreItens"
+  },
+  "options": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "imagem": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

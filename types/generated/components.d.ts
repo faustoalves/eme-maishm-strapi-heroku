@@ -598,6 +598,15 @@ export interface McmvTaxasJurosMcmv extends Schema.Component {
           preset: 'light';
         }
       >;
+    tabela: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
     botao: Attribute.Component<'common.botao'> & Attribute.Required;
   };
 }

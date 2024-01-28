@@ -18,6 +18,15 @@
       "customField": "plugin::ckeditor.CKEditor",
       "required": true
     },
+    "tabela": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true
+    },
     "botao": {
       "type": "component",
       "repeatable": false,

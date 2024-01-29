@@ -7,6 +7,11 @@ export default {
     },
     {
       method: "GET",
+      path: "/bot/enterprises",
+      handler: "bot.getCities",
+    },
+    {
+      method: "GET",
       path: "/bot/enterprises/:city",
       handler: "bot.getNeighbourhood",
     },

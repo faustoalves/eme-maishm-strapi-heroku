@@ -2,6 +2,7 @@ const apiType = "api::mcmv.mcmv";
 
 import { factories } from "@strapi/strapi";
 import { getEstelar } from "../../../collections/estelar";
+import { parseImage } from "../../../parses/common/image";
 import { parseSeo } from "../../../parses/common/seo";
 
 export default factories.createCoreController(apiType, ({ strapi }) => ({
@@ -37,6 +38,8 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
     });
     let estelar = await getEstelar(strapi);
     entity.seo = parseSeo(entity.seo);
+    entity.banner.imagem = parseImage(entity.banner.imagem);
+    entity.simulacao.imagem = parseImage(entity.simulacao.imagem);
     return { ...entity, estelar: estelar };
   },
 }));

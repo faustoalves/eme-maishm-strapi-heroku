@@ -16,7 +16,11 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
           populate: "*",
         },
         vantagens: {
-          populate: "*",
+          populate: {
+            lista: {
+              populate: "*",
+            },
+          },
         },
         simulacao: {
           populate: "*",

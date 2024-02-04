@@ -44,6 +44,10 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
     entity.seo = parseSeo(entity.seo);
     entity.banner.imagem = parseImage(entity.banner.imagem);
     entity.simulacao.imagem = parseImage(entity.simulacao.imagem);
+    entity.vantagens.lista = entity.vantagens.lista.map((item) => {
+      item.icone = parseImage(item.icone);
+      return item;
+    });
     return { ...entity, estelar: estelar };
   },
 }));

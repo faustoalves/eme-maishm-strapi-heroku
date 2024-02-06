@@ -939,6 +939,7 @@ export interface ApiEmpreendimentoEmpreendimento extends Schema.CollectionType {
       Attribute.SetMinMax<{
         min: 1;
       }>;
+    linkVirtual: Attribute.String;
     plantasTitulo: Attribute.String & Attribute.Required;
     plantasItem: Attribute.Component<'empreendimento.plantas', true> &
       Attribute.Required &
@@ -1476,6 +1477,12 @@ export interface ApiSobreSobre extends Schema.SingleType {
     meioAmbiente: Attribute.Component<'sobre.meio-ambiente-sobre'> &
       Attribute.Required;
     premios: Attribute.Component<'sobre.premios-sobre'> & Attribute.Required;
+    tituloTransformacao: Attribute.String;
+    emeTransformacao: Attribute.Component<'sobre.bloco-transformacao'> &
+      Attribute.Required;
+    estelarTransformacao: Attribute.Component<'sobre.bloco-transformacao'> &
+      Attribute.Required;
+    tituloRedesSociais: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

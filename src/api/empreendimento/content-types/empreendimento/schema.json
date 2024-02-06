@@ -89,6 +89,9 @@
       "required": true,
       "min": 1
     },
+    "linkVirtual": {
+      "type": "string"
+    },
     "plantasTitulo": {
       "type": "string",
       "required": true

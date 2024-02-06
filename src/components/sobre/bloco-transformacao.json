@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sobre_bloco_transformacaos",
+  "info": {
+    "displayName": "blocoTransformacao"
+  },
+  "options": {},
+  "attributes": {
+    "conteudo": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "botao": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.botao"
+    },
+    "destaques": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sobre.banner-sobre-destaques",
+      "min": 1,
+      "max": 2
+    }
+  }
+}

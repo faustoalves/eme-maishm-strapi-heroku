@@ -802,6 +802,29 @@ export interface SobreBannerSobre extends Schema.Component {
   };
 }
 
+export interface SobreBlocoTransformacao extends Schema.Component {
+  collectionName: 'components_sobre_bloco_transformacaos';
+  info: {
+    displayName: 'blocoTransformacao';
+  };
+  attributes: {
+    conteudo: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
+    botao: Attribute.Component<'common.botao'>;
+    destaques: Attribute.Component<'sobre.banner-sobre-destaques', true> &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 2;
+      }>;
+  };
+}
+
 export interface SobreHistoriaItemSobre extends Schema.Component {
   collectionName: 'components_sobre_historia_item_sobres';
   info: {
@@ -1069,6 +1092,7 @@ declare module '@strapi/types' {
       'search.search-item': SearchSearchItem;
       'sobre.banner-sobre-destaques': SobreBannerSobreDestaques;
       'sobre.banner-sobre': SobreBannerSobre;
+      'sobre.bloco-transformacao': SobreBlocoTransformacao;
       'sobre.historia-item-sobre': SobreHistoriaItemSobre;
       'sobre.historia-sobre': SobreHistoriaSobre;
       'sobre.inovacao-sobre': SobreInovacaoSobre;

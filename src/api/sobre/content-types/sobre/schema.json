@@ -59,6 +59,25 @@
       "repeatable": false,
       "component": "sobre.premios-sobre",
       "required": true
+    },
+    "tituloTransformacao": {
+      "type": "string"
+    },
+    "emeTransformacao": {
+      "displayName": "blocoTransformacao",
+      "type": "component",
+      "repeatable": false,
+      "component": "sobre.bloco-transformacao",
+      "required": true
+    },
+    "estelarTransformacao": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sobre.bloco-transformacao",
+      "required": true
+    },
+    "tituloRedesSociais": {
+      "type": "string"
     }
   }
 }

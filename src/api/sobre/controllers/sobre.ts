@@ -48,6 +48,12 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
             },
           },
         },
+        emeTransformacao: {
+          populate: "*",
+        },
+        estelarTransformacao: {
+          populate: "*",
+        },
       },
     });
     entity.seo = parseSeo(entity.seo);

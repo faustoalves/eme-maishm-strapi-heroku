@@ -36,6 +36,9 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
             lista: {
               populate: "*",
             },
+            botao: {
+              populate: "*",
+            },
           },
         },
       },

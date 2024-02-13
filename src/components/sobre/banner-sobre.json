@@ -1,7 +1,8 @@
 {
   "collectionName": "components_sobre_banner_sobres",
   "info": {
-    "displayName": "BannerSobre"
+    "displayName": "BannerSobre",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,10 +20,10 @@
       "customField": "plugin::ckeditor.CKEditor"
     },
     "imagem": {
-      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": ["images"]
     },
     "destaques": {
       "displayName": "BannerSobreDestaques",
@@ -31,6 +32,17 @@
       "component": "sobre.banner-sobre-destaques",
       "required": true,
       "min": 1
+    },
+    "desktopBackground": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "required": true,
+      "multiple": false
+    },
+    "mobileBackground": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false
     }
   }
 }

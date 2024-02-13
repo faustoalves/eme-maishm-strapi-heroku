@@ -781,6 +781,7 @@ export interface SobreBannerSobre extends Schema.Component {
   collectionName: 'components_sobre_banner_sobres';
   info: {
     displayName: 'BannerSobre';
+    description: '';
   };
   attributes: {
     titulo: Attribute.String & Attribute.Required;
@@ -799,6 +800,8 @@ export interface SobreBannerSobre extends Schema.Component {
       Attribute.SetMinMax<{
         min: 1;
       }>;
+    desktopBackground: Attribute.Media & Attribute.Required;
+    mobileBackground: Attribute.Media;
   };
 }
 
@@ -948,6 +951,8 @@ export interface SobreOndeEstamosSobre extends Schema.Component {
         }
       >;
     imagem: Attribute.Media & Attribute.Required;
+    desktopBackground: Attribute.Media & Attribute.Required;
+    mobileBackground: Attribute.Media;
   };
 }
 
@@ -1044,6 +1049,8 @@ export interface SobreTecnologiaSobre extends Schema.Component {
         }
       >;
     imagem: Attribute.Media & Attribute.Required;
+    desktopBackground: Attribute.Media & Attribute.Required;
+    mobileBackground: Attribute.Media;
   };
 }
 

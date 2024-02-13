@@ -57,18 +57,34 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
       },
     });
     entity.seo = parseSeo(entity.seo);
-    entity.banner.imagem = parseImage(entity.banner.imagem);
+    entity.banner.desktopBackground = parseImage(
+      entity.banner.desktopBackground
+    );
+    entity.ondeEstamos.desktopBackground = parseImage(
+      entity.ondeEstamos.desktopBackground
+    );
+    entity.tecnologia.desktopBackground = parseImage(
+      entity.tecnologia.desktopBackground
+    );
+
+    entity.banner.mobileBackground = parseImage(entity.banner.mobileBackground);
+    entity.ondeEstamos.mobileBackground = parseImage(
+      entity.ondeEstamos.mobileBackground
+    );
+    entity.tecnologia.mobileBackground = parseImage(
+      entity.tecnologia.mobileBackground
+    );
+
     entity.historia.fatos = entity.historia.fatos.map((fato) => {
       fato.imagem = parseImage(fato.imagem);
       return fato;
     });
-    entity.ondeEstamos.imagem = parseImage(entity.ondeEstamos.imagem);
-    entity.tecnologia.imagem = parseImage(entity.tecnologia.imagem);
+
     entity.sustentabilidade.itens = entity.sustentabilidade.itens.map(
       (item) => {
         item.imagem = parseImage(item.imagem);
         return item;
-      },
+      }
     );
     entity.meioAmbiente.lista = entity.meioAmbiente.lista.map((item) => {
       item.imagem = parseImage(item.imagem);

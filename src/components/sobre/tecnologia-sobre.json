@@ -23,6 +23,17 @@
       "type": "media",
       "multiple": false,
       "required": true
+    },
+    "desktopBackground": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "required": true,
+      "multiple": false
+    },
+    "mobileBackground": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false
     }
   }
 }

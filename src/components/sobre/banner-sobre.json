@@ -19,12 +19,6 @@
       "required": true,
       "customField": "plugin::ckeditor.CKEditor"
     },
-    "imagem": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": ["images"]
-    },
     "destaques": {
       "displayName": "BannerSobreDestaques",
       "type": "component",

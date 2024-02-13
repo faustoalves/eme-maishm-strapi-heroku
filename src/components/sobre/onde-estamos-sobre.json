@@ -19,12 +19,6 @@
       "required": true,
       "customField": "plugin::ckeditor.CKEditor"
     },
-    "imagem": {
-      "allowedTypes": ["images"],
-      "type": "media",
-      "multiple": false,
-      "required": true
-    },
     "desktopBackground": {
       "allowedTypes": ["images"],
       "type": "media",
@@ -33,6 +27,7 @@
     },
     "mobileBackground": {
       "allowedTypes": ["images"],
+      "required": true,
       "type": "media",
       "multiple": false
     }

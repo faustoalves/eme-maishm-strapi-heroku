@@ -1,6 +1,7 @@
 const apiType = "api::mcmv.mcmv";
 
 import { factories } from "@strapi/strapi";
+import { getCardsCustomList } from "../../../collections/empreendimentos";
 import { getEstelar } from "../../../collections/estelar";
 import { parseImage } from "../../../parses/common/image";
 import { parseSeo } from "../../../parses/common/seo";
@@ -41,8 +42,15 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
             },
           },
         },
+        empreendimentos: {
+          populate: "*",
+        },
       },
     });
+    let listaEmpreendimetos = await getCardsCustomList(
+      entity.empreendimentos,
+      strapi,
+    );
     let estelar = await getEstelar(strapi);
     entity.seo = parseSeo(entity.seo);
     entity.banner.imagem = parseImage(entity.banner.imagem);
@@ -51,6 +59,10 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
       item.icone = parseImage(item.icone);
       return item;
     });
-    return { ...entity, estelar: estelar };
+    return {
+      ...entity,
+      estelar: estelar,
+      empreendimentos: listaEmpreendimetos,
+    };
   },
 }));

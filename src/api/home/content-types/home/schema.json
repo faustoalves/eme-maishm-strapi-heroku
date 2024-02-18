@@ -34,6 +34,14 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::cta.cta"
+    },
+    "empreendimentosTitulo": {
+      "type": "string"
+    },
+    "empreendimentos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::empreendimento.empreendimento"
     }
   }
 }

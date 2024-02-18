@@ -794,7 +794,6 @@ export interface SobreBannerSobre extends Schema.Component {
           preset: 'light';
         }
       >;
-    imagem: Attribute.Media & Attribute.Required;
     destaques: Attribute.Component<'sobre.banner-sobre-destaques', true> &
       Attribute.Required &
       Attribute.SetMinMax<{
@@ -950,9 +949,8 @@ export interface SobreOndeEstamosSobre extends Schema.Component {
           preset: 'light';
         }
       >;
-    imagem: Attribute.Media & Attribute.Required;
     desktopBackground: Attribute.Media & Attribute.Required;
-    mobileBackground: Attribute.Media;
+    mobileBackground: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -1048,7 +1046,6 @@ export interface SobreTecnologiaSobre extends Schema.Component {
           preset: 'light';
         }
       >;
-    imagem: Attribute.Media & Attribute.Required;
     desktopBackground: Attribute.Media & Attribute.Required;
     mobileBackground: Attribute.Media;
   };

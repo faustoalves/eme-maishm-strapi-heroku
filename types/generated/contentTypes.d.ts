@@ -1075,6 +1075,12 @@ export interface ApiHomeHome extends Schema.SingleType {
     banner: Attribute.Component<'home.banner-principal'> & Attribute.Required;
     ondeMorar: Attribute.Component<'home.onde-morar'> & Attribute.Required;
     ctas: Attribute.Relation<'api::home.home', 'oneToMany', 'api::cta.cta'>;
+    empreendimentosTitulo: Attribute.String;
+    empreendimentos: Attribute.Relation<
+      'api::home.home',
+      'oneToMany',
+      'api::empreendimento.empreendimento'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
@@ -1140,6 +1146,12 @@ export interface ApiMcmvMcmv extends Schema.SingleType {
     taxasJuros: Attribute.Component<'mcmv.taxas-juros-mcmv'> &
       Attribute.Required;
     duvidas: Attribute.Component<'mcmv.duvidas-mcmv'> & Attribute.Required;
+    empreendimentosTitulo: Attribute.String;
+    empreendimentos: Attribute.Relation<
+      'api::mcmv.mcmv',
+      'oneToMany',
+      'api::empreendimento.empreendimento'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::mcmv.mcmv', 'oneToOne', 'admin::user'> &

@@ -58,6 +58,14 @@
       "repeatable": false,
       "component": "mcmv.duvidas-mcmv",
       "required": true
+    },
+    "empreendimentosTitulo": {
+      "type": "string"
+    },
+    "empreendimentos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::empreendimento.empreendimento"
     }
   }
 }

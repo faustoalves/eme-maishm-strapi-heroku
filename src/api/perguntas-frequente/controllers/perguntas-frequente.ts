@@ -12,6 +12,9 @@ export default factories.createCoreController(apiType, ({ strapi }) => ({
         cta: {
           populate: "*",
         },
+        seo: {
+          populate: "*",
+        },
       },
     });
     return entity;
